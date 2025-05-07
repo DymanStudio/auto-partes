@@ -1,0 +1,186 @@
+/* Global Styles - THEME CONFIGURATION */
+/* ===== MODIFY COLORS HERE ===== */
+:root {
+    /* Primary Theme Colors - Change these to customize your site */
+    --primary-color: #e30022; /* Main theme color (currently blue) */
+    --secondary-color: #ff4444; /* Lighter version of primary color */
+    --accent-color: #ff0000; /* Darker version for accents and highlights */
+    
+    /* Text and Background Colors */
+    --text-color: #ffffff; /* Text on dark backgrounds */
+    --text-dark: #333333; /* Text on light backgrounds */
+    --bg-color: #121212; /* Very dark gray, almost black */
+    --dark-bg: #1a1a1a; /* Slightly lighter than bg-color for contrast */
+    --darker-bg: #0a0a0a; /* Darker than bg-color for cards and containers */
+    
+    /* UI Element Colors */
+    --light-gray: #333333; /* Dark gray for light elements */
+    --border-color: #444444; /* Slightly lighter gray for borders */
+    --white: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --card-bg: #1e1e1e; /* For card backgrounds */
+    
+    /* Call-to-Action Section Colors */
+    --cta-bg-color: var(--primary-color); /* Background for call-to-action sections */
+    --cta-text-color: var(--white); /* Text color for call-to-action sections */
+    
+    /* Hover and Active States */
+    --hover-color: var(--secondary-color);
+    --active-color: var(--accent-color);
+}
+/* ===== END OF COLOR CONFIGURATION ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-whatsapp {
+    background-color: var(--accent-color);
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Hero section with background image */
+.hero-background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+    padding: 3rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.page-content {
+    min-height: calc(100vh - 200px);
+    padding: 1rem 0;
+}
+
+/* Dark mode specific classes */
+.bg-white {
+    background-color: var(--dark-bg) !important;
+}
+
+.bg-gray-50 {
+    background-color: var(--darker-bg) !important;
+}
+
+.bg-gray-100 {
+    background-color: var(--light-gray) !important;
+}
+
+.text-gray-600, .text-gray-700 {
+    color: #cccccc !important;
+}
+
+.text-gray-400 {
+    color: #999999 !important;
+}
+
+.border-gray-700 {
+    border-color: var(--border-color) !important;
+}
+
+/* Primary color elements */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Secondary color elements */
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}

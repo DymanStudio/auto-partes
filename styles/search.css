@@ -1,0 +1,104 @@
+.search-container {
+    background-color: var(--dark-bg);
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #333333;
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: #222222;
+    color: var(--white);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(227, 0, 34, 0.2);
+}
+
+.search-input::placeholder {
+    color: #777777;
+}
+
+.search-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(227, 0, 34, 0.3);
+}
+
+.search-icon {
+    margin-right: 0.5rem;
+}
+
+/* Category filters */
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.category-filter {
+    padding: 0.5rem 1rem;
+    background-color: #333333;
+    border: 1px solid #444444;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #cccccc;
+}
+
+.category-filter:hover {
+    background-color: #444444;
+    border-color: var(--primary-color);
+}
+
+.category-filter.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .search-button {
+        width: 100%;
+    }
+    
+    .category-filters {
+        justify-content: center;
+    }
+}

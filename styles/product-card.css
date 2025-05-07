@@ -1,0 +1,132 @@
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333333;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.product-image-container {
+    position: relative;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+    overflow: hidden;
+    background-color: #0f0f0f;
+    border-bottom: 1px solid #333333;
+}
+
+.product-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-details {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-code {
+    font-size: 0.75rem;
+    color: #999999;
+    margin-bottom: 0.25rem;
+}
+
+.product-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.product-description {
+    font-size: 0.875rem;
+    color: #bbbbbb;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.product-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.product-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    background-color: #333333;
+    color: var(--white);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.product-price {
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 0.25rem;
+}
+
+.product-whatsapp-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.product-whatsapp-button:hover {
+    background-color: #ff0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(227, 0, 34, 0.4);
+}
+
+.product-whatsapp-icon {
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .product-name {
+        font-size: 1rem;
+    }
+    
+    .product-description {
+        font-size: 0.75rem;
+    }
+}
