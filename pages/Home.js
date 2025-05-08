@@ -15,7 +15,7 @@ function Home() {
     setSearchTerm(term);
 
     if (term.trim() !== "") {
-      navigate(`/catalogo?search=${encodeURIComponent(term)}`);
+      navigate(`/auto-partes/catalogo?search=${encodeURIComponent(term)}`);
     }
   };
 
@@ -25,7 +25,7 @@ function Home() {
   };
 
   const handleViewAllProducts = () => {
-    navigate("/catalogo");
+    navigate("/auto-partes/catalogo");
   };
 
   // Default hero image - can be replaced with your own
