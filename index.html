@@ -1,74 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>AutoRepuestos Express - Catálogo Online de Autopartes</title>
-		<meta name="description" content="Explora AutoRepuestos Express, tu catálogo online de autopartes con búsqueda avanzada y contacto directo por WhatsApp. Encuentra lo que necesitas hoy.">
-		<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3774/3774278.png" type="image/png">
-		
-		<!-- TailwindCSS -->
-		<script src="https://cdn.tailwindcss.com"></script>
-		
-		<!-- Font Awesome -->
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-		
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
-		
-		<!-- React -->
-		<script src="https://cdn.ezsite.ai/static/react.production.min.js"></script>
-		<script src="https://cdn.ezsite.ai/static/react-dom.production.min.js"></script>
-		
-		<!-- React Router -->
-		<script src="https://cdn.ezsite.ai/static/5.3.0/history.production.min.js"></script>
-		<script src="https://cdn.ezsite.ai/static/6.3.0/react-router.production.min.js"></script>
-		<script src="https://cdn.ezsite.ai/static/6.3.0/react-router-dom.production.min.js"></script>
-		
-		<!-- Babel -->
-		<script src="https://cdn.ezsite.ai/static/babel.min.js"></script>
-		
-		<!-- CSS -->
-		<link href="/styles/main.css" rel="stylesheet">
-		<link href="/styles/navbar.css" rel="stylesheet">
-		<link href="/styles/search.css" rel="stylesheet">
-		<link href="/styles/catalog.css" rel="stylesheet">
-		<link href="/styles/product-card.css" rel="stylesheet">
-		<link href="/styles/product-modal.css" rel="stylesheet">
-		<link href="/styles/whatsapp-button.css" rel="stylesheet">
-		<link href="/styles/admin.css" rel="stylesheet">
-		<script project-code="vl4e314cxsan" src="https://ezsite.ai/ezsite-api.js"></script>
-		<script src="https://ezsite.ai/ezsite-chatbot.js"></script>
-	<meta property="og:title" content="Descubre AutoRepuestos Express - Tu Catálogo de Autopartes"><meta property="og:description" content="AutoRepuestos Express ofrece un catálogo online de autopartes con filtros avanzados y contacto directo por WhatsApp. Encuentra y consulta fácilmente."><meta name="twitter:title" content="AutoRepuestos Express: Encuentra tus autopartes 🚗"><meta name="twitter:description" content="Catálogo online de autopartes con contacto directo por WhatsApp. Diseño moderno y optimizado para móviles."></head>
-	<body>
-		<div id="root"></div>
-		
-		<!-- JavaScript Files -->
-		<script type="text/babel" src="/utils/data.js"></script>
-		<script type="text/babel" src="/utils/auth.js"></script>
-		
-		<!-- Custom Hooks -->
-		<script type="text/babel" src="/hooks/useStaticData.js"></script>
-		<script type="text/babel" src="/hooks/useProducts.js"></script>
-		<script type="text/babel" src="/hooks/useAuth.js"></script>
-		<script type="text/babel" src="/hooks/useSearch.js"></script>
-		<script type="text/babel" src="/components/Navbar.js"></script>
-		<script type="text/babel" src="/components/SearchBar.js"></script>
-		<script type="text/babel" src="/components/CategoryFilter.js"></script>
-		<script type="text/babel" src="/components/ProductCard.js"></script>
-		<script type="text/babel" src="/components/ProductModal.js"></script>
-		<script type="text/babel" src="/components/ProductEditForm.js"></script>
-		<script type="text/babel" src="/components/WhatsAppButton.js"></script>
-		<script type="text/babel" src="/pages/Home.js"></script>
-		<script type="text/babel" src="/pages/Catalog.js"></script>
-		<script type="text/babel" src="/pages/About.js"></script>
-		<script type="text/babel" src="/pages/Contact.js"></script>
-		<script type="text/babel" src="/pages/Login.js"></script>
-		<script type="text/babel" src="/pages/Admin.js"></script>
-		<script type="text/babel" src="/App.js"></script>
-		<script type="text/babel">
-        ReactDOM.render(<App />, document.getElementById('root'));
-    
-		</script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoRepuestos Express - Catálogo Online de Autopartes</title>
+    <meta
+      name="description"
+      content="Explora AutoRepuestos Express, tu catálogo online de autopartes con búsqueda avanzada y contacto directo por WhatsApp. Encuentra lo que necesitas hoy."
+    />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/3774/3774278.png"
+      type="image/png"
+    />
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- React -->
+    <script src="https://cdn.ezsite.ai/static/react.production.min.js"></script>
+    <script src="https://cdn.ezsite.ai/static/react-dom.production.min.js"></script>
+
+    <!-- React Router -->
+    <script src="https://cdn.ezsite.ai/static/5.3.0/history.production.min.js"></script>
+    <script src="https://cdn.ezsite.ai/static/6.3.0/react-router.production.min.js"></script>
+    <script src="https://cdn.ezsite.ai/static/6.3.0/react-router-dom.production.min.js"></script>
+
+    <!-- Babel -->
+    <script src="https://cdn.ezsite.ai/static/babel.min.js"></script>
+
+    <!-- CSS -->
+    <link href="./styles/main.css" rel="stylesheet" />
+    <link href="./styles/navbar.css" rel="stylesheet" />
+    <link href="./styles/search.css" rel="stylesheet" />
+    <link href="./styles/catalog.css" rel="stylesheet" />
+    <link href="./styles/product-card.css" rel="stylesheet" />
+    <link href="./styles/product-modal.css" rel="stylesheet" />
+    <link href="./styles/whatsapp-button.css" rel="stylesheet" />
+    <link href="./styles/admin.css" rel="stylesheet" />
+    <script
+      project-code="vl4e314cxsan"
+      src="https://ezsite.ai/ezsite-api.js"
+    ></script>
+    <script src="https://ezsite.ai/ezsite-chatbot.js"></script>
+    <meta
+      property="og:title"
+      content="Descubre AutoRepuestos Express - Tu Catálogo de Autopartes"
+    />
+    <meta
+      property="og:description"
+      content="AutoRepuestos Express ofrece un catálogo online de autopartes con filtros avanzados y contacto directo por WhatsApp. Encuentra y consulta fácilmente."
+    />
+    <meta
+      name="twitter:title"
+      content="AutoRepuestos Express: Encuentra tus autopartes 🚗"
+    />
+    <meta
+      name="twitter:description"
+      content="Catálogo online de autopartes con contacto directo por WhatsApp. Diseño moderno y optimizado para móviles."
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- JavaScript Files -->
+    <script type="text/babel" src="./utils/data.js"></script>
+    <script type="text/babel" src="./utils/auth.js"></script>
+
+    <!-- Custom Hooks -->
+    <script type="text/babel" src="./hooks/useStaticData.js"></script>
+    <script type="text/babel" src="./hooks/useProducts.js"></script>
+    <script type="text/babel" src="./hooks/useAuth.js"></script>
+    <script type="text/babel" src="./hooks/useSearch.js"></script>
+    <script type="text/babel" src="./components/Navbar.js"></script>
+    <script type="text/babel" src="./components/SearchBar.js"></script>
+    <script type="text/babel" src="./components/CategoryFilter.js"></script>
+    <script type="text/babel" src="./components/ProductCard.js"></script>
+    <script type="text/babel" src="./components/ProductModal.js"></script>
+    <script type="text/babel" src="./components/ProductEditForm.js"></script>
+    <script type="text/babel" src="./components/WhatsAppButton.js"></script>
+    <script type="text/babel" src="./pages/Home.js"></script>
+    <script type="text/babel" src="./pages/Catalog.js"></script>
+    <script type="text/babel" src="./pages/About.js"></script>
+    <script type="text/babel" src="./pages/Contact.js"></script>
+    <script type="text/babel" src="./pages/Login.js"></script>
+    <script type="text/babel" src="./pages/Admin.js"></script>
+    <script type="text/babel" src="./App.js"></script>
+    <script type="text/babel">
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
 </html>
