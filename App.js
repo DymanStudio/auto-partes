@@ -4,7 +4,7 @@ function App() {
       <ReactRouterDOM.Routes data-id="qfuy3seuu" data-path="App.js">
         {/* Public Routes */}
         <ReactRouterDOM.Route
-          path="./"
+          path="/auto-partes/"
           element={
             <Layout data-id="me9bws9yj" data-path="App.js">
               <Home data-id="00enfjkmr" data-path="App.js" />
@@ -14,7 +14,7 @@ function App() {
           data-path="App.js"
         />
         <ReactRouterDOM.Route
-          path="./catalogo"
+          path="/auto-partes/catalogo"
           element={
             <Layout data-id="me9bws9yj" data-path="App.js">
               <Catalog data-id="1hmg1vfvp" data-path="App.js" />
@@ -24,7 +24,7 @@ function App() {
           data-path="App.js"
         />
         <ReactRouterDOM.Route
-          path="./nosotros"
+          path="/auto-partes/nosotros"
           element={
             <Layout data-id="me9bws9yj" data-path="App.js">
               <About data-id="539uc9afa" data-path="App.js" />
@@ -34,7 +34,7 @@ function App() {
           data-path="App.js"
         />
         <ReactRouterDOM.Route
-          path="./contacto"
+          path="/auto-partes/contacto"
           element={
             <Layout data-id="me9bws9yj" data-path="App.js">
               <Contact data-id="okn7b8ku8" data-path="App.js" />
@@ -46,7 +46,7 @@ function App() {
 
         {/* Login Route (kept for future functionality) */}
         <ReactRouterDOM.Route
-          path="./login"
+          path="/auto-partes/login"
           element={<Login data-id="juhjyodsq" data-path="App.js" />}
           data-id="ei94cnhjp"
           data-path="App.js"
@@ -229,7 +229,7 @@ function Footer() {
             <ul className="space-y-2" data-id="9nkg4ze4j" data-path="App.js">
               <li data-id="z1nyuyz44" data-path="App.js">
                 <ReactRouterDOM.Link
-                  to="./"
+                  to="/auto-partes/"
                   className="hover:text-blue-300 transition-colors"
                   data-id="3laybevqg"
                   data-path="App.js"
@@ -239,7 +239,7 @@ function Footer() {
               </li>
               <li data-id="2grgvqxao" data-path="App.js">
                 <ReactRouterDOM.Link
-                  to="./catalogo"
+                  to="/auto-partes/catalogo"
                   className="hover:text-blue-300 transition-colors"
                   data-id="n0mi5kned"
                   data-path="App.js"
@@ -249,7 +249,7 @@ function Footer() {
               </li>
               <li data-id="fauz40vxr" data-path="App.js">
                 <ReactRouterDOM.Link
-                  to="./nosotros"
+                  to="/auto-partes/nosotros"
                   className="hover:text-blue-300 transition-colors"
                   data-id="2sp3ff44z"
                   data-path="App.js"
@@ -259,7 +259,7 @@ function Footer() {
               </li>
               <li data-id="2c95ucls7" data-path="App.js">
                 <ReactRouterDOM.Link
-                  to="./contacto"
+                  to="/auto-partes/contacto"
                   className="hover:text-blue-300 transition-colors"
                   data-id="mahx2dm4b"
                   data-path="App.js"
